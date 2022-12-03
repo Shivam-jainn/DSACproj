@@ -1,7 +1,11 @@
+// PHONEBOOK DIRECTORY
+
+// Doubly Linked List implementation
+
 #include <stdio.h>
 #include <string.h>
 
-// implementation of phone book model using doubly linked list
+
 
 struct node 
 {
@@ -12,15 +16,20 @@ struct node
     struct node* prev;
 };
 
+// 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+
 struct node* head = NULL;
 struct node* tail = NULL;
 
 /* 
     operations : 
-        1) Adding of contact
-        2) Removing of contact
-        3) Searching for contact
-        4) Alphabetical sort 
+        1) Adding of contact :: add() //saanvi
+        2) Removing of contact :: remove()  //shivamjain 
+        3) Searching for contact :: search() //ankush
+        4) Alphabetical sort :: alphasort() //ravi
+
+
+        askinfo() ; //shivamjain
 */
 
 
@@ -28,6 +37,16 @@ struct node* tail = NULL;
 struct node* add(struct node* head, int num)
 {
     struct node* temp = (struct node*) malloc(sizeof(struct node));
-    temp->next = NULL;
+    temp->next = head;
+    temp->number = num;  
+    temp->prev = NULL;
+
+     printf("Enter your name : ");
+  
+    // scanf("%s", firstname);
+    
+    char lastname[50];
 }
+
+
 
